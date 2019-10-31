@@ -11,6 +11,7 @@
         <script>
          "use strict";
          function submitForm(oFormElement) {
+             console.log("bla");
              var xhr = new XMLHttpRequest();
              xhr.onload = function() {
                  var result = parseFloat(xhr.responseText);
@@ -37,8 +38,8 @@
             <h1>Is your review positive, or negative?</h1>
             <p>Enter your review below and click submit to find out...</p>
             <form method="POST"
-                  action="**REPLACE WITH PUBLIC API URL**"
-                  onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+                  action="https://udbxsv2vrb.execute-api.eu-west-1.amazonaws.com/default/sentiment_analysis_func"
+                  onsubmit="return submitForm(this);" >
                 <div class="form-group">
                     <label for="review">Review:</label>
                     <textarea class="form-control"  rows="5" id="review">Please write your review here.</textarea>
